@@ -1,0 +1,111 @@
+# Ground truth for the k8s-threat-detection-lab evaluation.
+#
+# Written by hand BEFORE the first evaluation run. A scenario counts as detected
+# when at least one alert whose rule name is in `expected_any` is emitted between
+# the scenario start and the scenario end + 5 seconds.
+#
+# Rule names come from the Falco rules artifact pinned in helm/falco-values.yaml
+# (falco-rules:5). The custom rules are in rules/custom_rules.yaml.
+version: 1
+frozen_on: "2026-11-05"
+window_grace_seconds: 8
+
+scenarios:
+  - id: S01_exec_shell
+    title: Interactive shell spawned in a running container
+    attack: T1609
+    expected_any:
+      - Terminal shell in container
+
+  - id: S02_read_shadow
+    title: Read /etc/shadow inside a container
+    attack: T1003.008
+    expected_any:
+      - Read sensitive file untrusted
+      - Read sensitive file trusted after startup
+
+  - id: S03_write_etc
+    title: Write a file under /etc in a container
+    attack: T1222.002
+    expected_any:
+      - Write below etc
+
+  - id: S04_write_bin
+    title: Write a file under /usr/bin in a container
+    attack: T1543
+    expected_any:
+      - Write below binary dir
+      - Modify binary dirs
+
+  - id: S05_package_manager
+    title: Package manager executed in a container
+    attack: T1505
+    expected_any:
+      - Launch Package Management Process in Container
+
+  - id: S06_privileged_pod
+    title: Pod started with securityContext.privileged
+    attack: T1611
+    expected_any:
+      - Launch Privileged Container
+
+  - id: S07_hostpath_etc
+    title: Pod mounts the host /etc into the container
+    attack: T1611
+    expected_any:
+      - Launch Sensitive Mount Container
+
+  - id: S08_service_account_token
+    title: Container reads its Kubernetes service-account token
+    attack: T1552.007
+    expected_any:
+      - Service Account Token Read in Container
+
+  - id: S09_netcat_reverse_shell
+    title: Netcat reverse shell from a container
+    attack: T1059.004
+    expected_any:
+      - Netcat Remote Code Execution in Container
+
+  - id: S10_miner_pool_port
+    title: Outbound connection to a crypto-mining pool port
+    attack: T1496
+    expected_any:
+      - Outbound Connection to Crypto Mining Port
+
+  - id: S11_clear_history
+    title: Delete the shell history file
+    attack: T1070.003
+    expected_any:
+      - Delete or rename shell history
+
+  - id: S12_drop_and_exec
+    title: Drop a binary in /tmp, chmod it and execute it
+    attack: T1105
+    expected_any:
+      - Drop and execute new binary in container
+      - Executable Created in /tmp
+
+  - id: S13_download_to_tmp
+    title: Download a script to /tmp with wget
+    attack: T1105
+    expected_any:
+      - Download to /tmp in Container
+
+  - id: S14_contact_api_server
+    title: Container connects to the Kubernetes API server
+    attack: T1613
+    expected_any:
+      - Contact K8S API Server From Container
+
+  - id: S15_ssh_client
+    title: SSH client launched from a container
+    attack: T1021.004
+    expected_any:
+      - SSH Client Launched in Container
+      - Disallowed SSH Connection Non Standard Port
+
+benign:
+  title: nginx + CronJob + rolling update + normal kubectl exec
+  duration_minutes: 15
+  expected_alerts: 0

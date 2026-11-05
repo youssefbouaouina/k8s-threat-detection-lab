@@ -36,6 +36,9 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Install evaluation dependencies
+        run: pip install -r requirements-dev.txt
+
       - name: Install Helm
         uses: azure/setup-helm@v4
         with:

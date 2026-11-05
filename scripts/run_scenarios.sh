@@ -13,7 +13,7 @@ for f in scenarios/S*.sh; do
   if ! bash "$f"; then
     echo "$id failed" | tee -a results/errors.log
   fi
-  sleep 4
+  sleep 12
   end=$(date +%s.%N)
   printf "%s\t%s\t%s\n" "$id" "$start" "$end" >> results/timeline.tsv
   echo "ran $id"

@@ -1,0 +1,7 @@
+rule,alerts
+Drop and execute new binary in container,56
+Download to /tmp in Container,4
+Service Account Token Read in Container,3
+Contact K8S API Server From Container,1
+Netcat Remote Code Execution in Container,1
+Read sensitive file untrusted,1

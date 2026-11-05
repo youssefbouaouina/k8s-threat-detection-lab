@@ -1,0 +1,7 @@
+rule,S01_exec_shell,S02_read_shadow,S03_write_etc,S04_write_bin,S05_package_manager,S06_privileged_pod,S07_hostpath_etc,S08_service_account_token,S09_netcat_reverse_shell,S10_miner_pool_port,S11_clear_history,S12_drop_and_exec,S13_download_to_tmp,S14_contact_api_server,S15_ssh_client
+Contact K8S API Server From Container,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0
+Download to /tmp in Container,0,0,0,0,0,0,0,0,0,0,0,4,4,0,0
+Drop and execute new binary in container,0,0,0,0,1,2,2,2,1,0,0,0,0,1,2
+Netcat Remote Code Execution in Container,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0
+Read sensitive file untrusted,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Service Account Token Read in Container,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0

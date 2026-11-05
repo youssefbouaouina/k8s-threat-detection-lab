@@ -1,0 +1,482 @@
+{
+  "generated_at": "2026-11-05T15:53:43+00:00",
+  "scenarios_total": 15,
+  "v1_detected": 3,
+  "v2_detected": 5,
+  "v1_rate": 0.2,
+  "v2_rate": 0.3333,
+  "custom_rules": [
+    "Download to /tmp in Container",
+    "Executable Created in /tmp",
+    "Outbound Connection to Crypto Mining Port",
+    "SSH Client Launched in Container",
+    "Service Account Token Read in Container"
+  ],
+  "benign_minutes": 15.4,
+  "benign_alerts": 52,
+  "benign_alerts_per_hour": 202.6,
+  "benign_details": [
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:39:00.337424086: Critical Executing binary not part of base image | proc_exe=mount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=345085881791 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=mount proc_exepath=/usr/bin/mount parent=<NA> command=mount -t tmpfs -o size=33554432 tmpfs /var/lib/kubelet/pods/e01f7ed1-7aed-48f6-90a8-e80dc5cad76e/volumes/kubernetes.io~projected/kube-api-access-jvkls terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:39:04.357061551: Critical Executing binary not part of base image | proc_exe=umount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=349105547543 proc_cwd= container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=umount proc_exepath=/usr/bin/umount parent=<NA> command=umount /var/lib/kubelet/pods/e01f7ed1-7aed-48f6-90a8-e80dc5cad76e/volumes/kubernetes.io~projected/kube-api-access-jvkls terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:39:20.051767979: Critical Executing binary not part of base image | proc_exe=mount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=364800220816 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=mount proc_exepath=/usr/bin/mount parent=<NA> command=mount -t tmpfs -o size=134217728 tmpfs /var/lib/kubelet/pods/129cbf09-53b5-4e48-b7f4-cdcc05422e83/volumes/kubernetes.io~projected/kube-api-access-h9f2s terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:39:21.453969280: Critical Executing binary not part of base image | proc_exe=umount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=366202428268 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=umount proc_exepath=/usr/bin/umount parent=<NA> command=umount /var/lib/kubelet/pods/04cddea5-b22d-4dd3-ae54-426ba8c8e63c/volumes/kubernetes.io~projected/kube-api-access-6m4qv terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:40:00.363147163: Critical Executing binary not part of base image | proc_exe=mount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=405111645643 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=mount proc_exepath=/usr/bin/mount parent=<NA> command=mount -t tmpfs -o size=33554432 tmpfs /var/lib/kubelet/pods/1fc2f3f9-9889-4e4c-95ff-13a0dd87f365/volumes/kubernetes.io~projected/kube-api-access-6dpw6 terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:40:03.477846462: Critical Executing binary not part of base image | proc_exe=umount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=408226314536 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=umount proc_exepath=/usr/bin/umount parent=<NA> command=umount /var/lib/kubelet/pods/1fc2f3f9-9889-4e4c-95ff-13a0dd87f365/volumes/kubernetes.io~projected/kube-api-access-6dpw6 terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:40:53.051359325: Critical Executing binary not part of base image | proc_exe=mount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=457799778337 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=mount proc_exepath=/usr/bin/mount parent=<NA> command=mount -t tmpfs -o size=134217728 tmpfs /var/lib/kubelet/pods/3538d11e-5b67-445f-9f54-bb490525fc90/volumes/kubernetes.io~projected/kube-api-access-vrvt6 terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:40:53.650350013: Critical Executing binary not part of base image | proc_exe=umount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=458398838593 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=umount proc_exepath=/usr/bin/umount parent=<NA> command=umount /var/lib/kubelet/pods/129cbf09-53b5-4e48-b7f4-cdcc05422e83/volumes/kubernetes.io~projected/kube-api-access-h9f2s terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:41:00.392061729: Critical Executing binary not part of base image | proc_exe=mount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=465140554812 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=mount proc_exepath=/usr/bin/mount parent=<NA> command=mount -t tmpfs -o size=33554432 tmpfs /var/lib/kubelet/pods/cd45feef-e68d-47c4-8be7-2b3ce6a18fd1/volumes/kubernetes.io~projected/kube-api-access-ft2tr terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:41:02.601943792: Critical Executing binary not part of base image | proc_exe=umount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=467350403774 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=umount proc_exepath=/usr/bin/umount parent=<NA> command=umount /var/lib/kubelet/pods/cd45feef-e68d-47c4-8be7-2b3ce6a18fd1/volumes/kubernetes.io~projected/kube-api-access-ft2tr terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:42:00.408487563: Critical Executing binary not part of base image | proc_exe=mount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=525156951707 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=mount proc_exepath=/usr/bin/mount parent=<NA> command=mount -t tmpfs -o size=33554432 tmpfs /var/lib/kubelet/pods/390a73e9-a334-406d-a1bd-8073f8ebaddd/volumes/kubernetes.io~projected/kube-api-access-tvgjt terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:42:02.716533872: Critical Executing binary not part of base image | proc_exe=umount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=527465023115 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=umount proc_exepath=/usr/bin/umount parent=<NA> command=umount /var/lib/kubelet/pods/390a73e9-a334-406d-a1bd-8073f8ebaddd/volumes/kubernetes.io~projected/kube-api-access-tvgjt terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:42:25.049322851: Critical Executing binary not part of base image | proc_exe=mount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=549797749688 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=mount proc_exepath=/usr/bin/mount parent=<NA> command=mount -t tmpfs -o size=134217728 tmpfs /var/lib/kubelet/pods/2a6b8295-d8ae-4329-96e3-9d6ac87437f6/volumes/kubernetes.io~projected/kube-api-access-x9bx7 terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:42:25.849208446: Critical Executing binary not part of base image | proc_exe=umount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=550597635425 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=umount proc_exepath=/usr/bin/umount parent=<NA> command=umount /var/lib/kubelet/pods/3538d11e-5b67-445f-9f54-bb490525fc90/volumes/kubernetes.io~projected/kube-api-access-vrvt6 terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:43:00.329687940: Critical Executing binary not part of base image | proc_exe=mount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=585078165585 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=mount proc_exepath=/usr/bin/mount parent=<NA> command=mount -t tmpfs -o size=33554432 tmpfs /var/lib/kubelet/pods/3e2e5ac3-8d42-46a7-953f-cc4c029946aa/volumes/kubernetes.io~projected/kube-api-access-hv546 terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:43:02.840273811: Critical Executing binary not part of base image | proc_exe=umount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=587588735799 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=umount proc_exepath=/usr/bin/umount parent=<NA> command=umount /var/lib/kubelet/pods/3e2e5ac3-8d42-46a7-953f-cc4c029946aa/volumes/kubernetes.io~projected/kube-api-access-hv546 terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:43:57.247723474: Critical Executing binary not part of base image | proc_exe=mount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=641996192039 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=mount proc_exepath=/usr/bin/mount parent=<NA> command=mount -t tmpfs -o size=134217728 tmpfs /var/lib/kubelet/pods/8ed098dd-6418-4b1c-8ed5-fa803c5fcf0e/volumes/kubernetes.io~projected/kube-api-access-cr9wb terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:43:57.947214894: Critical Executing binary not part of base image | proc_exe=umount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=642695691030 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=umount proc_exepath=/usr/bin/umount parent=<NA> command=umount /var/lib/kubelet/pods/2a6b8295-d8ae-4329-96e3-9d6ac87437f6/volumes/kubernetes.io~projected/kube-api-access-x9bx7 terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:44:00.264213874: Critical Executing binary not part of base image | proc_exe=mount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=645012658413 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=mount proc_exepath=/usr/bin/mount parent=<NA> command=mount -t tmpfs -o size=33554432 tmpfs /var/lib/kubelet/pods/8b0a2778-d0a4-4867-b927-cda4b759fa90/volumes/kubernetes.io~projected/kube-api-access-2c7qj terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:44:02.976262410: Critical Executing binary not part of base image | proc_exe=umount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=647724672968 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=umount proc_exepath=/usr/bin/umount parent=<NA> command=umount /var/lib/kubelet/pods/8b0a2778-d0a4-4867-b927-cda4b759fa90/volumes/kubernetes.io~projected/kube-api-access-2c7qj terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:45:00.386294964: Critical Executing binary not part of base image | proc_exe=mount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=705134743096 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=mount proc_exepath=/usr/bin/mount parent=<NA> command=mount -t tmpfs -o size=33554432 tmpfs /var/lib/kubelet/pods/4c79167d-816a-4699-aae6-7b367312d4bc/volumes/kubernetes.io~projected/kube-api-access-bs9st terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:45:03.097680756: Critical Executing binary not part of base image | proc_exe=umount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=707846120988 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=umount proc_exepath=/usr/bin/umount parent=<NA> command=umount /var/lib/kubelet/pods/4c79167d-816a-4699-aae6-7b367312d4bc/volumes/kubernetes.io~projected/kube-api-access-bs9st terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:45:29.549058841: Critical Executing binary not part of base image | proc_exe=mount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=734297538900 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=mount proc_exepath=/usr/bin/mount parent=<NA> command=mount -t tmpfs -o size=134217728 tmpfs /var/lib/kubelet/pods/bddc42ba-0976-40db-bc94-452ab1b2624b/volumes/kubernetes.io~projected/kube-api-access-hpm7z terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:45:30.249764729: Critical Executing binary not part of base image | proc_exe=umount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=734998209746 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=umount proc_exepath=/usr/bin/umount parent=<NA> command=umount /var/lib/kubelet/pods/8ed098dd-6418-4b1c-8ed5-fa803c5fcf0e/volumes/kubernetes.io~projected/kube-api-access-cr9wb terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Service Account Token Read in Container",
+      "container": "coredns",
+      "output": "15:45:44.060634124: Warning Service account token read in container (user=<NA> process=coredns command=coredns -conf /etc/coredns/Corefile file=/var/run/secrets/kubernetes.io/serviceaccount/token container=coredns image=registry.k8s.io/coredns/coredns) container_id=bd3d75ac3836 container_name=coredns container_image_repository=registry.k8s.io/coredns/coredns container_image_tag=v1.11.1 k8s_pod_name=coredns-7db6d8ff4d-qg746 k8s_ns_name=kube-system"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:46:00.419541854: Critical Executing binary not part of base image | proc_exe=mount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=765168044922 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=mount proc_exepath=/usr/bin/mount parent=<NA> command=mount -t tmpfs -o size=33554432 tmpfs /var/lib/kubelet/pods/8420e9ce-e03f-4527-b110-2ea08e968e66/volumes/kubernetes.io~projected/kube-api-access-7xfnl terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:46:03.230739632: Critical Executing binary not part of base image | proc_exe=umount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=767979201087 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=umount proc_exepath=/usr/bin/umount parent=<NA> command=umount /var/lib/kubelet/pods/8420e9ce-e03f-4527-b110-2ea08e968e66/volumes/kubernetes.io~projected/kube-api-access-7xfnl terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:47:00.359233100: Critical Executing binary not part of base image | proc_exe=mount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=825107675044 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=mount proc_exepath=/usr/bin/mount parent=<NA> command=mount -t tmpfs -o size=33554432 tmpfs /var/lib/kubelet/pods/02b5510e-a79c-4d2d-ae49-8a5e24d98985/volumes/kubernetes.io~projected/kube-api-access-pbnw4 terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:47:01.767856613: Critical Executing binary not part of base image | proc_exe=mount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=826516333434 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=mount proc_exepath=/usr/bin/mount parent=<NA> command=mount -t tmpfs -o size=134217728 tmpfs /var/lib/kubelet/pods/7bc9f036-02b4-4e8d-9090-dfd24dfcba3c/volumes/kubernetes.io~projected/kube-api-access-7l64n terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:47:02.468818318: Critical Executing binary not part of base image | proc_exe=umount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=827217315784 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=umount proc_exepath=/usr/bin/umount parent=<NA> command=umount /var/lib/kubelet/pods/bddc42ba-0976-40db-bc94-452ab1b2624b/volumes/kubernetes.io~projected/kube-api-access-hpm7z terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:47:03.375653572: Critical Executing binary not part of base image | proc_exe=umount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=828124161124 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=umount proc_exepath=/usr/bin/umount parent=<NA> command=umount /var/lib/kubelet/pods/02b5510e-a79c-4d2d-ae49-8a5e24d98985/volumes/kubernetes.io~projected/kube-api-access-pbnw4 terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:48:00.398714582: Critical Executing binary not part of base image | proc_exe=mount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=885146443125 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=mount proc_exepath=/usr/bin/mount parent=<NA> command=mount -t tmpfs -o size=33554432 tmpfs /var/lib/kubelet/pods/2d119e63-23f9-4eaf-af24-6f95f2899f26/volumes/kubernetes.io~projected/kube-api-access-br287 terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:48:03.510736225: Critical Executing binary not part of base image | proc_exe=umount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=888259200984 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=umount proc_exepath=/usr/bin/umount parent=<NA> command=umount /var/lib/kubelet/pods/2d119e63-23f9-4eaf-af24-6f95f2899f26/volumes/kubernetes.io~projected/kube-api-access-br287 terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:48:33.876648269: Critical Executing binary not part of base image | proc_exe=mount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=918625136379 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=mount proc_exepath=/usr/bin/mount parent=<NA> command=mount -t tmpfs -o size=134217728 tmpfs /var/lib/kubelet/pods/4e4393ce-2498-4ebf-862a-8eebeb6430a1/volumes/kubernetes.io~projected/kube-api-access-fltl4 terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:48:34.576604574: Critical Executing binary not part of base image | proc_exe=umount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=919325059886 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=umount proc_exepath=/usr/bin/umount parent=<NA> command=umount /var/lib/kubelet/pods/7bc9f036-02b4-4e8d-9090-dfd24dfcba3c/volumes/kubernetes.io~projected/kube-api-access-7l64n terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:49:00.419016351: Critical Executing binary not part of base image | proc_exe=mount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=945167529135 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=mount proc_exepath=/usr/bin/mount parent=<NA> command=mount -t tmpfs -o size=33554432 tmpfs /var/lib/kubelet/pods/e661140f-5d69-4bee-be33-77ff8f6e5b96/volumes/kubernetes.io~projected/kube-api-access-wx4bt terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:49:03.635127043: Critical Executing binary not part of base image | proc_exe=umount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=948383554145 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=umount proc_exepath=/usr/bin/umount parent=<NA> command=umount /var/lib/kubelet/pods/e661140f-5d69-4bee-be33-77ff8f6e5b96/volumes/kubernetes.io~projected/kube-api-access-wx4bt terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:50:00.342172422: Critical Executing binary not part of base image | proc_exe=mount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=1005090657368 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=mount proc_exepath=/usr/bin/mount parent=<NA> command=mount -t tmpfs -o size=33554432 tmpfs /var/lib/kubelet/pods/54bfda0c-7459-42f4-99e1-a58a9baf7f61/volumes/kubernetes.io~projected/kube-api-access-qczp7 terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:50:02.752064402: Critical Executing binary not part of base image | proc_exe=umount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=1007500534930 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=umount proc_exepath=/usr/bin/umount parent=<NA> command=umount /var/lib/kubelet/pods/54bfda0c-7459-42f4-99e1-a58a9baf7f61/volumes/kubernetes.io~projected/kube-api-access-qczp7 terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:50:06.075927391: Critical Executing binary not part of base image | proc_exe=mount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=1010824421734 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=mount proc_exepath=/usr/bin/mount parent=<NA> command=mount -t tmpfs -o size=134217728 tmpfs /var/lib/kubelet/pods/70bf4465-c15f-49b0-a698-c0e0f8f9f89e/volumes/kubernetes.io~projected/kube-api-access-72rl7 terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:50:06.775822313: Critical Executing binary not part of base image | proc_exe=umount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=1011524313015 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=umount proc_exepath=/usr/bin/umount parent=<NA> command=umount /var/lib/kubelet/pods/4e4393ce-2498-4ebf-862a-8eebeb6430a1/volumes/kubernetes.io~projected/kube-api-access-fltl4 terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:51:00.375242495: Critical Executing binary not part of base image | proc_exe=mount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=1065123070791 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=mount proc_exepath=/usr/bin/mount parent=<NA> command=mount -t tmpfs -o size=33554432 tmpfs /var/lib/kubelet/pods/2bd9cb31-c581-4cdb-bd99-3862ab5def99/volumes/kubernetes.io~projected/kube-api-access-847gt terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:51:02.879763576: Critical Executing binary not part of base image | proc_exe=umount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=1067628239366 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=umount proc_exepath=/usr/bin/umount parent=<NA> command=umount /var/lib/kubelet/pods/2bd9cb31-c581-4cdb-bd99-3862ab5def99/volumes/kubernetes.io~projected/kube-api-access-847gt terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:51:38.379709043: Critical Executing binary not part of base image | proc_exe=mount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=1103128185163 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=mount proc_exepath=/usr/bin/mount parent=<NA> command=mount -t tmpfs -o size=134217728 tmpfs /var/lib/kubelet/pods/31beb5a4-c1a5-4e7c-a00f-0faa5592c89b/volumes/kubernetes.io~projected/kube-api-access-c4r84 terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:51:38.976798207: Critical Executing binary not part of base image | proc_exe=umount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=1103725263001 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=umount proc_exepath=/usr/bin/umount parent=<NA> command=umount /var/lib/kubelet/pods/70bf4465-c15f-49b0-a698-c0e0f8f9f89e/volumes/kubernetes.io~projected/kube-api-access-72rl7 terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:52:00.294930373: Critical Executing binary not part of base image | proc_exe=mount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=1125043388859 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=mount proc_exepath=/usr/bin/mount parent=<NA> command=mount -t tmpfs -o size=33554432 tmpfs /var/lib/kubelet/pods/6d28e0bd-af89-439b-ad23-53bbb89265bf/volumes/kubernetes.io~projected/kube-api-access-pqmcc terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:52:03.007873413: Critical Executing binary not part of base image | proc_exe=umount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=1127756356254 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=umount proc_exepath=/usr/bin/umount parent=<NA> command=umount /var/lib/kubelet/pods/6d28e0bd-af89-439b-ad23-53bbb89265bf/volumes/kubernetes.io~projected/kube-api-access-pqmcc terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:53:00.331330983: Critical Executing binary not part of base image | proc_exe=mount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=1185079781118 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=mount proc_exepath=/usr/bin/mount parent=<NA> command=mount -t tmpfs -o size=33554432 tmpfs /var/lib/kubelet/pods/e5d72fa2-888d-4640-87b0-e92c06ae1a84/volumes/kubernetes.io~projected/kube-api-access-97q4b terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:53:03.143797522: Critical Executing binary not part of base image | proc_exe=umount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=1187892283269 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=umount proc_exepath=/usr/bin/umount parent=<NA> command=umount /var/lib/kubelet/pods/e5d72fa2-888d-4640-87b0-e92c06ae1a84/volumes/kubernetes.io~projected/kube-api-access-97q4b terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:53:10.593239901: Critical Executing binary not part of base image | proc_exe=mount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=1195341677145 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=mount proc_exepath=/usr/bin/mount parent=<NA> command=mount -t tmpfs -o size=134217728 tmpfs /var/lib/kubelet/pods/7fed8384-d73f-483c-a7f0-e16f5c674483/volumes/kubernetes.io~projected/kube-api-access-v9cf8 terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Drop and execute new binary in container",
+      "container": "None",
+      "output": "15:53:11.191725948: Critical Executing binary not part of base image | proc_exe=umount proc_sname= gparent=<NA> proc_exe_ino_ctime=1793892795251223847 proc_exe_ino_mtime=1732219314000000000 proc_exe_ino_ctime_duration_proc_start=1195940184044 proc_cwd=./ container_start_ts=1793892794044604453 evt_type=execve user=root user_uid=0 user_loginuid=-1 process=umount proc_exepath=/usr/bin/umount parent=<NA> command=umount /var/lib/kubelet/pods/31beb5a4-c1a5-4e7c-a00f-0faa5592c89b/volumes/kubernetes.io~projected/kube-api-access-c4r84 terminal=0 exe_flags=EXE_WRITABLE|EXE_UPPER_LAYER container_id=9adccc9d2935 container_name=<NA> container_image_repository=<NA> container_image_tag=<NA> k8s_pod_name=<NA> k8s_ns_name=<NA>"
+    },
+    {
+      "rule": "Service Account Token Read in Container",
+      "container": "coredns",
+      "output": "15:53:37.062755837: Warning Service account token read in container (user=<NA> process=coredns command=coredns -conf /etc/coredns/Corefile file=/var/run/secrets/kubernetes.io/serviceaccount/token container=coredns image=registry.k8s.io/coredns/coredns) container_id=bd3d75ac3836 container_name=coredns container_image_repository=registry.k8s.io/coredns/coredns container_image_tag=v1.11.1 k8s_pod_name=coredns-7db6d8ff4d-qg746 k8s_ns_name=kube-system"
+    }
+  ],
+  "alerts_total": 66,
+  "per_scenario": [
+    {
+      "id": "S01_exec_shell",
+      "title": "Interactive shell spawned in a running container",
+      "attack": "T1609",
+      "detected_v1": false,
+      "detected_v2": false,
+      "alerts": 1,
+      "matched_rules": [],
+      "status": "missed"
+    },
+    {
+      "id": "S02_read_shadow",
+      "title": "Read /etc/shadow inside a container",
+      "attack": "T1003.008",
+      "detected_v1": true,
+      "detected_v2": true,
+      "alerts": 1,
+      "matched_rules": [
+        "Read sensitive file untrusted"
+      ],
+      "status": "detected"
+    },
+    {
+      "id": "S03_write_etc",
+      "title": "Write a file under /etc in a container",
+      "attack": "T1222.002",
+      "detected_v1": false,
+      "detected_v2": false,
+      "alerts": 0,
+      "matched_rules": [],
+      "status": "missed"
+    },
+    {
+      "id": "S04_write_bin",
+      "title": "Write a file under /usr/bin in a container",
+      "attack": "T1543",
+      "detected_v1": false,
+      "detected_v2": false,
+      "alerts": 0,
+      "matched_rules": [],
+      "status": "missed"
+    },
+    {
+      "id": "S05_package_manager",
+      "title": "Package manager executed in a container",
+      "attack": "T1505",
+      "detected_v1": false,
+      "detected_v2": false,
+      "alerts": 1,
+      "matched_rules": [],
+      "status": "missed"
+    },
+    {
+      "id": "S06_privileged_pod",
+      "title": "Pod started with securityContext.privileged",
+      "attack": "T1611",
+      "detected_v1": false,
+      "detected_v2": false,
+      "alerts": 2,
+      "matched_rules": [],
+      "status": "missed"
+    },
+    {
+      "id": "S07_hostpath_etc",
+      "title": "Pod mounts the host /etc into the container",
+      "attack": "T1611",
+      "detected_v1": false,
+      "detected_v2": false,
+      "alerts": 3,
+      "matched_rules": [],
+      "status": "missed"
+    },
+    {
+      "id": "S08_service_account_token",
+      "title": "Container reads its Kubernetes service-account token",
+      "attack": "T1552.007",
+      "detected_v1": false,
+      "detected_v2": true,
+      "alerts": 4,
+      "matched_rules": [
+        "Service Account Token Read in Container"
+      ],
+      "status": "detected"
+    },
+    {
+      "id": "S09_netcat_reverse_shell",
+      "title": "Netcat reverse shell from a container",
+      "attack": "T1059.004",
+      "detected_v1": true,
+      "detected_v2": true,
+      "alerts": 2,
+      "matched_rules": [
+        "Netcat Remote Code Execution in Container"
+      ],
+      "status": "detected"
+    },
+    {
+      "id": "S10_miner_pool_port",
+      "title": "Outbound connection to a crypto-mining pool port",
+      "attack": "T1496",
+      "detected_v1": false,
+      "detected_v2": false,
+      "alerts": 0,
+      "matched_rules": [],
+      "status": "missed"
+    },
+    {
+      "id": "S11_clear_history",
+      "title": "Delete the shell history file",
+      "attack": "T1070.003",
+      "detected_v1": false,
+      "detected_v2": false,
+      "alerts": 0,
+      "matched_rules": [],
+      "status": "missed"
+    },
+    {
+      "id": "S12_drop_and_exec",
+      "title": "Drop a binary in /tmp, chmod it and execute it",
+      "attack": "T1105",
+      "detected_v1": false,
+      "detected_v2": false,
+      "alerts": 4,
+      "matched_rules": [],
+      "status": "missed"
+    },
+    {
+      "id": "S13_download_to_tmp",
+      "title": "Download a script to /tmp with wget",
+      "attack": "T1105",
+      "detected_v1": false,
+      "detected_v2": true,
+      "alerts": 5,
+      "matched_rules": [
+        "Download to /tmp in Container"
+      ],
+      "status": "detected"
+    },
+    {
+      "id": "S14_contact_api_server",
+      "title": "Container connects to the Kubernetes API server",
+      "attack": "T1613",
+      "detected_v1": true,
+      "detected_v2": true,
+      "alerts": 2,
+      "matched_rules": [
+        "Contact K8S API Server From Container"
+      ],
+      "status": "detected"
+    },
+    {
+      "id": "S15_ssh_client",
+      "title": "SSH client launched from a container",
+      "attack": "T1021.004",
+      "detected_v1": false,
+      "detected_v2": false,
+      "alerts": 2,
+      "matched_rules": [],
+      "status": "missed"
+    }
+  ],
+  "per_rule": {
+    "Drop and execute new binary in container": 56,
+    "Download to /tmp in Container": 4,
+    "Service Account Token Read in Container": 3,
+    "Contact K8S API Server From Container": 1,
+    "Netcat Remote Code Execution in Container": 1,
+    "Read sensitive file untrusted": 1
+  },
+  "matrix": {
+    "Read sensitive file untrusted": {
+      "S01_exec_shell": 1,
+      "S02_read_shadow": 1
+    },
+    "Drop and execute new binary in container": {
+      "S05_package_manager": 1,
+      "S06_privileged_pod": 2,
+      "S07_hostpath_etc": 2,
+      "S08_service_account_token": 2,
+      "S09_netcat_reverse_shell": 1,
+      "S14_contact_api_server": 1,
+      "S15_ssh_client": 2
+    },
+    "Service Account Token Read in Container": {
+      "S07_hostpath_etc": 1,
+      "S08_service_account_token": 1
+    },
+    "Netcat Remote Code Execution in Container": {
+      "S08_service_account_token": 1,
+      "S09_netcat_reverse_shell": 1
+    },
+    "Download to /tmp in Container": {
+      "S12_drop_and_exec": 4,
+      "S13_download_to_tmp": 4
+    },
+    "Contact K8S API Server From Container": {
+      "S13_download_to_tmp": 1,
+      "S14_contact_api_server": 1
+    }
+  }
+}

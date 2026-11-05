@@ -1,0 +1,95 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  unit:
+    name: Lint and unit tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements-dev.txt
+      - run: ruff check .
+      - run: python -m pytest -q
+
+  lab:
+    name: Full lab on Minikube
+    if: github.event_name == 'workflow_dispatch' || github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    needs: unit
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Helm
+        uses: azure/setup-helm@v4
+        with:
+          version: v3.16.3
+
+      - name: Start Minikube
+        uses: medyagh/setup-minikube@v0.0.20
+        with:
+          driver: docker
+          kubernetes-version: v1.30.0
+          cpus: 2
+          memory: 4096
+          wait: all
+
+      - name: Cluster and victim workload
+        run: bash scripts/cluster_up.sh
+
+      - name: Install Falco
+        run: bash scripts/install_falco.sh
+
+      - name: Collect Falco alerts
+        run: |
+          bash scripts/collect_alerts.sh results/alerts.jsonl &
+          echo $! > /tmp/collector.pid
+          sleep 5
+
+      - name: Attack scenarios
+        run: bash scripts/run_scenarios.sh
+
+      - name: Benign workload
+        env:
+          BENIGN_MINUTES: "15"
+        run: bash scenarios/benign.sh
+
+      - name: Stop collector
+        if: always()
+        run: |
+          kill "$(cat /tmp/collector.pid)" 2>/dev/null || true
+          sleep 2
+
+      - name: Evaluate
+        run: python evaluate.py
+
+      - name: Upload measured results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lab-results
+          path: |
+            results/
+            !results/falco_rules_loaded.txt
+
+      - name: Falco diagnostics on failure
+        if: failure()
+        run: |
+          kubectl -n falco get pods -o wide || true
+          kubectl -n falco logs -l app.kubernetes.io/name=falco -c falco --tail=100 || true

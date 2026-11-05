@@ -1,0 +1,73 @@
+# Custom Falco rules written for scenarios that the default ruleset does not
+# cover (or ships disabled). They are loaded on top of the default rules.
+#
+# v1 in the evaluation = default rules only (alerts whose rule is NOT in this file).
+# v2 = default rules + these rules.
+
+- rule: Service Account Token Read in Container
+  desc: A container process read its Kubernetes service-account token.
+  condition: >
+    open_read
+    and container
+    and fd.name contains "/var/run/secrets/kubernetes.io/serviceaccount/token"
+  output: >
+    Service account token read in container
+    (user=%user.name process=%proc.name command=%proc.cmdline file=%fd.name
+    container=%container.name image=%container.image.repository)
+  priority: WARNING
+  tags: [container, mitre_credential_access, T1552.007, custom]
+
+- rule: Outbound Connection to Crypto Mining Port
+  desc: >
+    Outbound TCP connection to a port commonly used by crypto-mining pools.
+    Falco's own miner-pool rule ships disabled, so this narrow rule is enabled here.
+  condition: >
+    evt.type=connect
+    and container
+    and fd.rport in (3333, 4444, 5555, 7777, 9999, 14444, 45700)
+  output: >
+    Outbound connection to a crypto-mining port
+    (user=%user.name process=%proc.name command=%proc.cmdline
+    connection=%fd.name rport=%fd.rport container=%container.name)
+  priority: CRITICAL
+  tags: [container, network, mitre_impact, T1496, custom]
+
+- rule: Executable Created in /tmp
+  desc: A file under /tmp was made executable inside a container.
+  condition: >
+    evt.type in (chmod, fchmod, fchmodat)
+    and container
+    and fd.name startswith /tmp/
+  output: >
+    File made executable in /tmp
+    (user=%user.name process=%proc.name command=%proc.cmdline file=%fd.name
+    container=%container.name)
+  priority: WARNING
+  tags: [container, mitre_defense_evasion, T1222, custom]
+
+- rule: Download to /tmp in Container
+  desc: curl or wget wrote a payload under /tmp inside a container.
+  condition: >
+    spawned_process
+    and container
+    and proc.name in (curl, wget)
+    and proc.cmdline contains "/tmp/"
+  output: >
+    Download to /tmp in container
+    (user=%user.name process=%proc.name command=%proc.cmdline
+    container=%container.name image=%container.image.repository)
+  priority: WARNING
+  tags: [container, network, mitre_command_and_control, T1105, custom]
+
+- rule: SSH Client Launched in Container
+  desc: An SSH client was launched from inside a container.
+  condition: >
+    spawned_process
+    and container
+    and proc.name in (ssh, scp, sftp, sshpass)
+  output: >
+    SSH client launched in container
+    (user=%user.name process=%proc.name command=%proc.cmdline
+    container=%container.name image=%container.image.repository)
+  priority: NOTICE
+  tags: [container, network, mitre_lateral_movement, T1021.004, custom]

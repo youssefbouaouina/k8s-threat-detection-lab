@@ -1,0 +1,41 @@
+# Values for the Falco Helm chart used by the lab.
+# Chart: falco 9.2.2 (Falco 0.45.x) - pinned in scripts/install_falco.sh.
+driver:
+  kind: modern_ebpf
+
+tty: true
+
+falco:
+  json_output: true
+  json_include_output_property: true
+  log_stderr: true
+  log_syslog: false
+  log_level: info
+  grpc:
+    enabled: false
+  grpc_output:
+    enabled: false
+  webserver:
+    enabled: false
+
+falcoctl:
+  artifact:
+    install:
+      enabled: true
+    follow:
+      enabled: false
+
+collectors:
+  enabled: true
+
+# Custom rules are created as a ConfigMap by scripts/install_falco.sh and
+# mounted into the rules.d directory the chart already loads.
+mounts:
+  volumes:
+    - name: lab-rules
+      configMap:
+        name: lab-rules
+  volumeMounts:
+    - name: lab-rules
+      mountPath: /etc/falco/rules.d/lab-rules.yaml
+      subPath: lab-rules.yaml

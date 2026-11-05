@@ -11,10 +11,6 @@ falco:
   log_stderr: true
   log_syslog: false
   log_level: info
-  grpc:
-    enabled: false
-  grpc_output:
-    enabled: false
   webserver:
     enabled: false
 
